@@ -75,7 +75,7 @@ python attack.py attack --recipe textfooler/pwws --model path_to_model_checkpoin
 
 
 ### Acknowledgments
-The code was built on [TextAttack](https://github.com/QData/TextAttack) and [Hugging Face/Transformers](https://github.com/huggingface/transformers)
+The code was built on top of [TextAttack](https://github.com/QData/TextAttack) and [Hugging Face/Transformers](https://github.com/huggingface/transformers)
 
 ### Reference:
 If you find this repository helpful, please cite our paper:
