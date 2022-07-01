@@ -12,12 +12,14 @@ Download the [data](https://drive.google.com/drive/folders/1J18AsUKuBYFtHmV0b1pf
 ### Training
 
 **Training CNN/LSTM base models**
+
 For IMDB, set `--max_seq_length 250`. Fine-tune hyperparameters (e.g. learning rate, the number of hidden units) on each dataset.
 ```
 python train.py train --gpu_id 2 --model cnn/lstm --dataset sst2/imdb/ag/trec --task base --batch-size 64 --epochs 10 --learning-rate 0.01 --max_seq_length 50
 ```
 
 **Training BERT/DeBERTa base models**
+
 Fine-tune hyperparameters (e.g. learning rate, weight decay) on each dataset.
 ```
 python train_main.py train --gpu_id 2 --model bert/deberta --dataset sst2 --task base --epochs 10 --learning-rate 1e-5
