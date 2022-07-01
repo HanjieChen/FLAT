@@ -32,10 +32,9 @@ The code was built on
 If you find this repository helpful, please cite our paper:
 ```bibtex
 @inproceedings{chen2022adversarial,
-    title = "Adversarial Training for Improving Model Robustness? Look at Both Prediction and Interpretation",
-    author = "Chen, Hanjie  and
-      Ji, Yangfeng",
-    booktitle = "Proceedings of the AAAI Conference on Artificial Intelligence",
-    year = "2022",
+    title={Adversarial Training for Improving Model Robustness? Look at Both Prediction and Interpretation},
+    author={Chen, Hanjie and Ji, Yangfeng},
+    journal={arXiv preprint arXiv:2203.12709},
+    year={2022}
 }
 ```
