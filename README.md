@@ -34,7 +34,7 @@ If you find this repository helpful, please cite our paper:
 @inproceedings{chen2022adversarial,
     title={Adversarial Training for Improving Model Robustness? Look at Both Prediction and Interpretation},
     author={Chen, Hanjie and Ji, Yangfeng},
-    journal={arXiv preprint arXiv:2203.12709},
+    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
     year={2022}
 }
 ```
