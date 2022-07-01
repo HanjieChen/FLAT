@@ -43,11 +43,11 @@ python train.py train --attack textfooler/pwws --gpu_id 2 --model bert/deberta -
 
 ### FLAT
 
-Search $\beta$ and $\alpha$ in (0.0001, 0.001, 0.01,...,1000). The optimal hyperparameters vary across different models and datasets.
+Search $\beta$ and $\beta$ in (0.0001, 0.001, 0.01,...,1000). The optimal hyperparameters vary across different models and datasets.
 
 **FALT for CNN/LSTM**
 
-For IMDB, set `--max_seq_length 250`. Fine-tune hyperparameters (e.g. $\beta$, $\gamma$, learning rate, the number of hidden units) on each dataset.
+For IMDB, set `--max_seq_length 250`. Fine-tune hyperparameters (e.g. $\beta$, $\beta$, learning rate, the number of hidden units) on each dataset.
 ```
 python train_main.py train --attack textfooler/pwws --gpu_id 2 --model cnn_mask/lstm_mask --dataset sst2/imdb/ag/trec --task adv_reg --batch-size 64 --epochs 30 --learning-rate 0.005 --max_seq_length 50 --num-clean-epochs 10 --beta 0.1 --gamma 0.001
 ```
