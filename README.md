@@ -43,7 +43,7 @@ python train.py train --attack textfooler/pwws --gpu_id 2 --model bert/deberta -
 
 ### FLAT
 
-Search $\beta$ and $\gamma$ in (0.0001, 0.001, 0.01,...,1000). The optimal hyperparameters vary across different models and datasets.
+Search $\beta$ and $\alpha$ in (0.0001, 0.001, 0.01,...,1000). The optimal hyperparameters vary across different models and datasets.
 
 **FALT for CNN/LSTM**
 
