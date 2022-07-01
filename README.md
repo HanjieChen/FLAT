@@ -1,6 +1,6 @@
 # FLAT
 
-Code for the paper ["Adversarial Training for Improving Model Robustness? Look at Both Prediction and Interpretation"](https://www.aaai.org/AAAI22Papers/AAAI-2735.ChenH.pdf)
+Code for the paper [Adversarial Training for Improving Model Robustness? Look at Both Prediction and Interpretation](https://www.aaai.org/AAAI22Papers/AAAI-2735.ChenH.pdf)
 
 ### Data:
 Download the [data](https://drive.google.com/drive/folders/1J18AsUKuBYFtHmV0b1pfyd93G_lb2eLQ?usp=sharing) and put it in the same folder with the code.
