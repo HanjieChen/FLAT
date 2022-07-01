@@ -3,7 +3,7 @@
 Code for the paper [Adversarial Training for Improving Model Robustness? Look at Both Prediction and Interpretation](https://www.aaai.org/AAAI22Papers/AAAI-2735.ChenH.pdf)
 
 ### Data
-Download [datasets](https://drive.google.com/drive/folders/1707n-X__GXdHNGFv1I2j2GLugIEsLj6J?usp=sharing) and put them into the folder `textattack/my_datasets`.
+Download [datasets](https://drive.google.com/drive/folders/1707n-X__GXdHNGFv1I2j2GLugIEsLj6J?usp=sharing) and put them in the folder `textattack/my_datasets`.
 
 ### Preparation
 - Install the packages and toolkits in `requirements.txt`
