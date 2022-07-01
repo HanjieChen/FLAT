@@ -37,4 +37,5 @@ If you find this repository helpful, please cite our paper:
       Ji, Yangfeng",
     booktitle = "Proceedings of the AAAI Conference on Artificial Intelligence",
     year = "2022",
+}
 ```
