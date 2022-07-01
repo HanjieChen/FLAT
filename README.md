@@ -9,7 +9,7 @@ Download the [data](https://drive.google.com/drive/folders/1J18AsUKuBYFtHmV0b1pf
 - Install the packages and toolkits in `requirements.txt`
 - `cd` into `CNN_LSTM` and `BERT_DeBERTa` for running experiments for CNN/LSTM and BERT/DeBERTa respectively
 
-### Training
+### Training base models
 
 **Training CNN/LSTM base models**
 
@@ -22,25 +22,28 @@ python train.py train --gpu_id 2 --model cnn/lstm --dataset sst2/imdb/ag/trec --
 
 Fine-tune hyperparameters (e.g. learning rate, weight decay) on each dataset.
 ```
-python train_main.py train --gpu_id 2 --model bert/deberta --dataset sst2 --task base --epochs 10 --learning-rate 1e-5
+python train.py train --gpu_id 2 --model bert/deberta --dataset sst2/imdb/ag/trec --task base --epochs 10 --learning-rate 1e-5
 ```
 
-Note that the code is for the e-SNLI dataset. For the BERT model on other datasets, set `--task_name` with the data name `quora/qqp/mrpc`. For the MRPC dataset, set `--max_seq_length` as `100`. 
+### Adversarial training
 
-For the DAttn model on other datasets, utilize the corresponding `DataLoader` and `Sampler` by revising lines `1, 2, 6` in `load_data.py`. Set `--data_path` as `train.tsv`. Set the output dimension of the final linear layer of the DAttn model as `2` (line 59 in `deatten_model.py`).
+**Adversarial training for CNN/LSTM**
 
-### Explain models on test data via GMASK:
-Explain the well-trained model by running
+For IMDB, set `--max_seq_length 250`. Fine-tune hyperparameters (e.g. learning rate, the number of hidden units) on each dataset.
 ```
-python explain.py
+python train.py train --attack textfooler/pwws --gpu_id 2 --model cnn/lstm --dataset sst2/imdb/ag/trec --task adv --batch-size 64 --epochs 30 --learning-rate 0.01 --max_seq_length 50 --num-clean-epochs 10
 ```
-For each test example, we save the words and their indexes in the order of importance as the explanation.
+
+**Adversarial training for BERT/DeBERTa**
+
+Fine-tune hyperparameters (e.g. learning rate, weight decay) on each dataset.
+```
+python train.py train --attack textfooler --gpu_id 0 --model bert --dataset trec --task adv --epochs 39 --learning-rate 3e-5 --low_freq 0 --max_seq_length 15 --num-clean-epochs 10
+```
+
 
 ### Acknowledgments
-The code was built on
-- https://github.com/huggingface/transformers
-- https://github.com/asappresearch/rationale-alignment
-- https://github.com/libowen2121/SNLI-decomposable-attention
+The code was built on [TextAttack](https://github.com/QData/TextAttack) and [Hugging Face/Transformers](https://github.com/huggingface/transformers)
 
 ### Reference:
 If you find this repository helpful, please cite our paper:
