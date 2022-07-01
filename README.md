@@ -20,9 +20,9 @@ python train.py train --gpu_id 2 --model cnn/lstm --dataset sst2/imdb/ag/trec --
 
 **Training BERT/DeBERTa base models**
 
-Fine-tune hyperparameters (e.g. learning rate, weight decay) on each dataset.
+For IMDB, set `--max_seq_length 250`. Fine-tune hyperparameters (e.g. learning rate, weight decay) on each dataset.
 ```
-python train.py train --gpu_id 2 --model bert/deberta --dataset sst2/imdb/ag/trec --task base --epochs 10 --learning-rate 1e-5
+python train.py train --gpu_id 2 --model bert/deberta --dataset sst2/imdb/ag/trec --task base --epochs 10 --learning-rate 1e-5 --max_seq_length 50
 ```
 
 ### Adversarial training
@@ -36,9 +36,9 @@ python train.py train --attack textfooler/pwws --gpu_id 2 --model cnn/lstm --dat
 
 **Adversarial training for BERT/DeBERTa**
 
-Fine-tune hyperparameters (e.g. learning rate, weight decay) on each dataset.
+For IMDB, set `--max_seq_length 250`. Fine-tune hyperparameters (e.g. learning rate, weight decay) on each dataset.
 ```
-python train.py train --attack textfooler --gpu_id 0 --model bert --dataset trec --task adv --epochs 39 --learning-rate 3e-5 --low_freq 0 --max_seq_length 15 --num-clean-epochs 10
+python train.py train --attack textfooler --gpu_id 0 --model bert/deberta --dataset sst2/imdb/ag/trec --task adv --epochs 30 --learning-rate 1e-5 --max_seq_length 50 --num-clean-epochs 10
 ```
 
 
